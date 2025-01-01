@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Button</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: sans-serif;
+            width: 99%;
+            text-align: center;
+            background-color: #000000;
+        }
+
+        h1 {
+            font-family: "Rubik Vinyl", serif;
+            font-weight: 400;
+            font-size: 248px;
+            font-style: normal;
+            color: #cb0400;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            color: #cb0400;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .button {
+            width: 40%;
+            margin: auto;
+        }
+        .button:hover {
+            cursor: pointer;
+            opacity: 0.8;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <h1>Button</h1>
+    <img class="button" src="Button-Red.svg" alt="Click me!">
+    <h2 class="hidden">You did it, this was the whole point of this website</h2>
+    <script>
+        const button = document.querySelector('.button');
+        const heading = document.querySelector('h2');
+
+        button.addEventListener('click', () => {
+            heading.classList.toggle('hidden');
+            setTimeout(function () {
+                    heading.classList.toggle('hidden');
+                }, 2000)
+        })
+    </script>
+</body>
+</html>
